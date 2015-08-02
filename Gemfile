@@ -10,3 +10,4 @@ gem "sqlite3"
 # gem "pry-byebug"
 gem "time_ago_in_words"
 gem "mini_magick"
+#gem 'pg'
