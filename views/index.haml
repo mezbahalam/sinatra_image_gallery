@@ -4,9 +4,17 @@
   %ul.list-unstyled
     -@images.each do |image|
       %li.col-md-4
-        %h2=image.title
-        %a{href: image.file, data: { lightbox: "gallery", title: image.title } }
-          %img{src: image.file.url(:small), width: "100%"}
+        %h3=image.title
+
+        %p
+          %a.thumbnail{href: image.file, data: { lightbox: "gallery", title: image.title } }
+            %img{src: image.file.url(:small), width: "100%"}
+
+        %p
+          %span(class='st_facebook_hcount' displayText='Facebook' st_url="#{request.base_url}/images/#{image.id}")
+          %span(class='st_twitter_hcount' displayText='Tweet'  st_url="#{request.base_url}/images/#{image.id}")
+          %span(class='st_linkedin_hcount' displayText='LinkedIn'  st_url="#{request.base_url}/images/#{image.id}")
+
 
 %h1 Upload new image
 
